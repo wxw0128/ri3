@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width:100%;
+            height:45px;
+        }
+        .uls{
+            width:100%;
+            height:45px;
+            border-bottom:1px solid #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .uls li{
+            width:33.3%;
+            line-height: 45px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .on{
+            color:blue;
+            border-bottom:1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class='box'>   
+        <ul class='uls'>
+            <li class='on'>未使用</li>
+            <li>已使用</li>
+            <li>已过期</li>
+        </ul>
+    </div>
+    <script src='jquery-1.8.3.min.js'></script>
+    <script>
+        $('.uls li').on("click",function(){
+            $(this).addClass('on').siblings().removeClass('on');
+        })
+       
+    </script>
+</body>
+</html>
